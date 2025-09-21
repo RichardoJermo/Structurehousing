@@ -117,7 +117,7 @@ fig.update_layout(
         xanchor="center",
         font=dict(size=18, color="black")
     ),
-    font=dict(size=30, color="black"),
+    font=dict(size=14, color="black"),
     margin=dict(l=30, r=150, t=80, b=30),
     plot_bgcolor="white",
     height=600
@@ -133,6 +133,7 @@ try:
     st.image(logo, use_container_width=True)
 except:
     st.info("Please add your logo as 'logo.png' in the same directory to display it here.")
+
 
 
 
