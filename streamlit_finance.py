@@ -66,9 +66,7 @@ fig = go.Figure(data=[go.Sankey(
         thickness=22,
         line=dict(color="black", width=0.4),
         label=labels,
-        color=colors,
-        # Add white text with shadow for better visibility
-        font=dict(color="white", size=12, family="Arial")
+        color=colors
     ),
     link=dict(
         source=sources,
