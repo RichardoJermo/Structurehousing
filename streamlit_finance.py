@@ -14,7 +14,7 @@ labels = [
     # Layer 1 - Production Facility
     "TerraWatt", "Local Partners", "Precast Facility",
     # Layer 2 - Housing REIT
-    "Debt Finance", "Equity Finance", "University", "Housing REIT",
+    "Debt Finance", "Equity Finance", "Universities", "Housing REIT",
     # Final
     "Investors"
 ]
@@ -26,7 +26,7 @@ colors = [
     "#1CA71C",  # Precast Facility
     "#9A9A9A",  # Debt Finance
     "#FBC15E",  # Equity Finance
-    "#FF9F40",  # University
+    "#FF9F40",  # Universities
     "#845EC2",  # Housing REIT
     "#D65DB1"   # Investors
 ]
@@ -129,7 +129,8 @@ st.plotly_chart(fig, use_container_width=True)
 # Add logo below the diagram
 try:
     # Try to load the logo from the same directory
-    logo = Image.open("logo.png")
+    logo = Image.open("11.png")
     st.image(logo, use_container_width=True)
 except:
     st.info("Please add your logo as 'logo.png' in the same directory to display it here.")
+
