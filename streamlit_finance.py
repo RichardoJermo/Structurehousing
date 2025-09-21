@@ -130,7 +130,8 @@ st.plotly_chart(fig, use_container_width=True)
 # Add logo below the diagram
 try:
     # Try to load the logo from the same directory
-    logo = Image.open("logo.png")
+    logo = Image.open("11.png")
     st.image(logo, use_column_width=True)
 except:
+
     st.info("Please add your logo as 'logo.png' in the same directory to display it here.")
