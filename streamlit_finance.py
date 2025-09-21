@@ -1,7 +1,6 @@
 import streamlit as st
 import plotly.graph_objects as go
 from PIL import Image
-import base64
 
 # Set page configuration
 st.set_page_config(
@@ -67,7 +66,9 @@ fig = go.Figure(data=[go.Sankey(
         thickness=22,
         line=dict(color="black", width=0.4),
         label=labels,
-        color=colors
+        color=colors,
+        # Add white text with shadow for better visibility
+        font=dict(color="white", size=12, family="Arial")
     ),
     link=dict(
         source=sources,
@@ -116,9 +117,9 @@ fig.update_layout(
         text="<b>Two-Layer Investment Model Structure</b>",
         x=0.5,
         xanchor="center",
-        font=dict(size=18)
+        font=dict(size=18, color="black")
     ),
-    font=dict(size=12),
+    font=dict(size=12, color="black"),
     margin=dict(l=30, r=150, t=80, b=30),
     plot_bgcolor="white",
     height=600
@@ -130,8 +131,7 @@ st.plotly_chart(fig, use_container_width=True)
 # Add logo below the diagram
 try:
     # Try to load the logo from the same directory
-    logo = Image.open("11.png")
-    st.image(logo, use_column_width=True)
+    logo = Image.open("logo.png")
+    st.image(logo, use_container_width=True)
 except:
-
     st.info("Please add your logo as 'logo.png' in the same directory to display it here.")
