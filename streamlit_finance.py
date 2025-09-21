@@ -63,7 +63,7 @@ fig = go.Figure(data=[go.Sankey(
     arrangement="snap",
     node=dict(
         pad=18,
-        thickness=40,
+        thickness=22,
         line=dict(color="black", width=0.4),
         label=labels,
         color=colors
@@ -133,6 +133,7 @@ try:
     st.image(logo, use_container_width=True)
 except:
     st.info("Please add your logo as 'logo.png' in the same directory to display it here.")
+
 
 
 
